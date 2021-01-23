@@ -12,7 +12,6 @@ All the rights of the relevant materials belong to Standfor University.
 - https://zhuanlan.zhihu.com/p/78536912
 
 ## As1
-
 ### reading
 
 - [ ] note:&ensp;Word Vectors I: Introduction, SVD and Word2Ve
@@ -21,11 +20,10 @@ All the rights of the relevant materials belong to Standfor University.
 
 ### practice
 - [x] Computation on Arrays: Broadcasting
-- [ ] coding: Assignment1
+- [x] coding: Assignment1
 - [x] Gensim
 
 ## As2
-
 ### reading
 
 - [ ] note:&ensp;Word Vectors II: GloVe, Evaluation and Trainin
@@ -40,7 +38,6 @@ All the rights of the relevant materials belong to Standfor University.
 - [ ] coding: Assignment2
 
 ## As3
-
 ### reading
 
 - [ ] note:&ensp;Dependency Parsing 
@@ -52,7 +49,6 @@ All the rights of the relevant materials belong to Standfor University.
 - [ ] coding: Assignment3
 
 ## As4
-
 ### reading
 
 - [ ] note:&emsp;Machine Translation, Sequence-to-sequence and Attention
@@ -72,8 +68,6 @@ How to understand pack_padded_sequence and pad_packed_sequence?
 [(English ed)](https://gist.github.com/HarshTrivedi/f4e7293e941b17d19058f6fb90ab0fec)
 
 ## As5
-
-
 ### reading
 
 - [ ] note:&emsp;Machine Translation, Sequence-to-sequence and Attention
@@ -84,8 +78,8 @@ How to understand pack_padded_sequence and pad_packed_sequence?
 
 - [ ] coding: Assignment5
 
-## Final project
 
+## Final project
 **reading**:
 
 - [ ] final-project-practical-tips
