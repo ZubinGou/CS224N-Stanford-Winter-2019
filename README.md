@@ -20,7 +20,7 @@ All the rights of the relevant materials belong to Standfor University.
 &nbsp;
 
 ### practice
-
+- [x] Computation on Arrays: Broadcasting
 - [ ] coding: Assignment1
 - [x] Gensim
 
