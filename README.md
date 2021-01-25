@@ -3,20 +3,26 @@ The collection of ALL relevant materials about CS224N-Stanford/Winter 2019 cours
 All the rights of the relevant materials belong to Standfor University.  
 
 ## Links
-- Course page [CS224N](http://cs224n.stanford.edu)
+- Course page [CS224N](http://web.stanford.edu/class/cs224n/)
 - Lecture videos 2019 [Youtube](https://www.youtube.com/playlist?list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z)
 - Selected Solutions
   - https://github.com/Luvata/CS224N-2019/tree/master/Assignment
   - https://github.com/flypythoncom/cs224n_2019/tree/master/Assignment_1_intro_word_vectors
   - https://github.com/Observerspy/CS224n
+  - https://looperxx.github.io/CS224n-2019-Assignment/
 - https://zhuanlan.zhihu.com/p/78536912
 
 ## As1
+- [x] lec1
+
 ### reading
 
-- [ ] note:&ensp;Word Vectors I: Introduction, SVD and Word2Ve
-- [ ] Word2Vec Tutorial - The Skip-Gram Model
+- [ ] note: Word Vectors I: Introduction, SVD and Word2Ve
 &nbsp;
+- [x] Word2Vec Tutorial - The Skip-Gram Model
+- [x] word2vec中的数学原理详解
+- [x] Efficient Estimation of Word Representations in Vector Space (original word2vec paper)
+- [x] Distributed Representations of Words and Phrases and their Compositionality (negative sampling paper)
 
 ### practice
 - [x] Computation on Arrays: Broadcasting
@@ -24,24 +30,27 @@ All the rights of the relevant materials belong to Standfor University.
 - [x] Gensim
 
 ## As2
+- [x] lec2
+- [ ] lec3
 ### reading
 
-- [ ] note:&ensp;Word Vectors II: GloVe, Evaluation and Trainin
-- [ ] gradient-notes
-- [ ] CS231n notes on backprop
+- [ ] note: Word Vectors II: GloVe, Evaluation and Trainin
 - [ ] review-differential-calculus
-- [ ] backprop_old
+- [ ] gradient-notes
 - [ ] CS231n notes on network architectures
+- [ ] CS231n notes on backprop
+- [ ] backprop_old
 
 ### practice
-
+- [x] python review
 - [ ] coding: Assignment2
+- [ ] writing: Assignment2
 
 ## As3
 ### reading
 
-- [ ] note:&ensp;Dependency Parsing 
-- [ ] note:&ensp;Language Models and Recurrent Neural Network
+- [ ] note: Dependency Parsing 
+- [ ] note: Language Models and Recurrent Neural Network
 - [ ] a3
 
 ### practice
