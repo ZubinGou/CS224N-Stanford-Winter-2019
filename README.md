@@ -44,7 +44,7 @@ All the rights of the relevant materials belong to Standfor University.
 
 ### practice
 - [x] python review
-- [x] writing: Assignment2
+- [x] written: Assignment2
 - [ ] coding: Assignment2
 
 
@@ -55,6 +55,7 @@ All the rights of the relevant materials belong to Standfor University.
 - [ ] a3
 
 ### practice
+- [ ] written: Assignment3
 - [ ] coding: Assignment3
 
 ## As4
@@ -65,6 +66,7 @@ All the rights of the relevant materials belong to Standfor University.
 - [ ] read:&emsp;Massive Exploration of Neural Machine Translation Architectures (practical advice for hyperparameter choices)
 
 ### practice
+- [ ] written: Assignment4
 - [ ] coding: Assignment4
 
 
