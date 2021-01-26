@@ -9,15 +9,19 @@ import random
 import numpy as np
 import os.path as op
 
+from numpy.lib.function_base import gradient
+
+
 def load_saved_params():
     """
     A helper function that loads previously saved parameters and resets
     iteration start.
     """
+    # find the largest/latest saved iter
     st = 0
     for f in glob.glob("saved_params_*.npy"):
         iter = int(op.splitext(op.basename(f))[0].split("_")[2])
-        if (iter > st):
+        if iter > st:
             st = iter
 
     if st > 0:
@@ -38,9 +42,8 @@ def save_params(iter, params):
         pickle.dump(random.getstate(), f)
 
 
-def sgd(f, x0, step, iterations, postprocessing=None, useSaved=False,
-        PRINT_EVERY=10):
-    """ Stochastic Gradient Descent
+def sgd(f, x0, step, iterations, postprocessing=None, useSaved=False, PRINT_EVERY=10):
+    """Stochastic Gradient Descent
 
     Implement the stochastic gradient descent method in this function.
 
@@ -86,7 +89,8 @@ def sgd(f, x0, step, iterations, postprocessing=None, useSaved=False,
 
         loss = None
         ### YOUR CODE HERE
-
+        loss, gradient = f(x)
+        x -= gradient * step
         ### END YOUR CODE
 
         x = postprocessing(x)
@@ -94,7 +98,7 @@ def sgd(f, x0, step, iterations, postprocessing=None, useSaved=False,
             if not exploss:
                 exploss = loss
             else:
-                exploss = .95 * exploss + .05 * loss
+                exploss = 0.95 * exploss + 0.05 * loss
             print("iter %d: %f" % (iter, exploss))
 
         if iter % SAVE_PARAMS_EVERY == 0 and useSaved:
