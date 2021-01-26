@@ -7,8 +7,7 @@ All the rights of the relevant materials belong to Standfor University.
 - Lecture videos 2019 [Youtube](https://www.youtube.com/playlist?list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z)
 - Selected Solutions
   - https://github.com/Luvata/CS224N-2019/tree/master/Assignment
-  - https://github.com/flypythoncom/cs224n_2019/tree/master/Assignment_1_intro_word_vectors
-  - https://github.com/Observerspy/CS224n
+  - https://github.com/flypythoncom/cs224n_2019
   - https://looperxx.github.io/CS224n-2019-Assignment/
 - https://zhuanlan.zhihu.com/p/78536912
 
