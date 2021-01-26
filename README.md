@@ -31,7 +31,8 @@ All the rights of the relevant materials belong to Standfor University.
 
 ## As2
 - [x] lec2
-- [ ] lec3
+- [x] lec3
+- [x] lec4
 ### reading
 
 - [ ] note: Word Vectors II: GloVe, Evaluation and Trainin
