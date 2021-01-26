@@ -28,12 +28,13 @@ All the rights of the relevant materials belong to Standfor University.
 - [x] coding: Assignment1
 - [x] Gensim
 
+
 ## As2
 - [x] lec2
 - [x] lec3
 - [x] lec4
-### reading
 
+### reading
 - [ ] note: Word Vectors II: GloVe, Evaluation and Trainin
 - [ ] review-differential-calculus
 - [ ] gradient-notes
@@ -43,8 +44,9 @@ All the rights of the relevant materials belong to Standfor University.
 
 ### practice
 - [x] python review
+- [x] writing: Assignment2
 - [ ] coding: Assignment2
-- [ ] writing: Assignment2
+
 
 ## As3
 ### reading
