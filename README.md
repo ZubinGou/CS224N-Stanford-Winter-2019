@@ -44,10 +44,11 @@ All the rights of the relevant materials belong to Standfor University.
 ### practice
 - [x] python review
 - [x] written: Assignment2
-- [ ] coding: Assignment2
+- [x] coding: Assignment2
 
 
 ## As3
+- [x] lec5
 ### reading
 - [ ] note: Dependency Parsing 
 - [ ] note: Language Models and Recurrent Neural Network
