@@ -13,8 +13,11 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+use_gpu = torch.cuda.is_available()
+
+
 class ParserModel(nn.Module):
-    """ Feedforward neural network with an embedding layer and single hidden layer.
+    """Feedforward neural network with an embedding layer and single hidden layer.
     The ParserModel will predict which transition should be applied to a
     given partial parse configuration.
 
@@ -30,9 +33,11 @@ class ParserModel(nn.Module):
             in other ParserModel methods.
         - For further documentation on "nn.Module" please see https://pytorch.org/docs/stable/nn.html.
     """
-    def __init__(self, embeddings, n_features=36,
-        hidden_size=200, n_classes=3, dropout_prob=0.5):
-        """ Initialize the parser model.
+
+    def __init__(
+        self, embeddings, n_features=36, hidden_size=200, n_classes=3, dropout_prob=0.5
+    ):
+        """Initialize the parser model.
 
         @param embeddings (Tensor): word embeddings (num_words, embedding_size)
         @param n_features (int): number of input features
@@ -46,8 +51,11 @@ class ParserModel(nn.Module):
         self.dropout_prob = dropout_prob
         self.embed_size = embeddings.shape[1]
         self.hidden_size = hidden_size
+        embeddings = torch.tensor(embeddings)
+        if use_gpu:
+            embeddings = embeddings.cuda()
         self.pretrained_embeddings = nn.Embedding(embeddings.shape[0], self.embed_size)
-        self.pretrained_embeddings.weight = nn.Parameter(torch.tensor(embeddings))
+        self.pretrained_embeddings.weight = nn.Parameter(embeddings)
 
         ### YOUR CODE HERE (~5 Lines)
         ### TODO:
@@ -61,7 +69,7 @@ class ParserModel(nn.Module):
         ###         It has been shown empirically, that this provides better initial weights
         ###         for training networks than random uniform initialization.
         ###         For more details checkout this great blogpost:
-        ###             http://andyljones.tumblr.com/post/110998971763/an-explanation-of-xavier-initialization 
+        ###             http://andyljones.tumblr.com/post/110998971763/an-explanation-of-xavier-initialization
         ### Hints:
         ###     - After you create a linear layer you can access the weight
         ###       matrix via:
@@ -71,25 +79,30 @@ class ParserModel(nn.Module):
         ###     Linear Layer: https://pytorch.org/docs/stable/nn.html#torch.nn.Linear
         ###     Xavier Init: https://pytorch.org/docs/stable/nn.html#torch.nn.init.xavier_uniform_
         ###     Dropout: https://pytorch.org/docs/stable/nn.html#torch.nn.Dropout
-
-
+        self.embed_to_hidden = nn.Linear(
+            self.n_features * self.embed_size, self.hidden_size
+        )
+        nn.init.xavier_uniform_(self.embed_to_hidden.weight, gain=1)
+        self.dropout = nn.Dropout(self.dropout_prob)
+        self.hidden_to_logits = nn.Linear(self.hidden_size, self.n_classes)
+        nn.init.xavier_uniform_(self.hidden_to_logits.weight, gain=1)
         ### END YOUR CODE
 
     def embedding_lookup(self, t):
-        """ Utilize `self.pretrained_embeddings` to map input `t` from input tokens (integers)
-            to embedding vectors.
+        """Utilize `self.pretrained_embeddings` to map input `t` from input tokens (integers)
+        to embedding vectors.
 
-            PyTorch Notes:
-                - `self.pretrained_embeddings` is a torch.nn.Embedding object that we defined in __init__
-                - Here `t` is a tensor where each row represents a list of features. Each feature is represented by an integer (input token).
-                - In PyTorch the Embedding object, e.g. `self.pretrained_embeddings`, allows you to
-                    go from an index to embedding. Please see the documentation (https://pytorch.org/docs/stable/nn.html#torch.nn.Embedding)
-                    to learn how to use `self.pretrained_embeddings` to extract the embeddings for your tensor `t`.
+        PyTorch Notes:
+            - `self.pretrained_embeddings` is a torch.nn.Embedding object that we defined in __init__
+            - Here `t` is a tensor where each row represents a list of features. Each feature is represented by an integer (input token).
+            - In PyTorch the Embedding object, e.g. `self.pretrained_embeddings`, allows you to
+                go from an index to embedding. Please see the documentation (https://pytorch.org/docs/stable/nn.html#torch.nn.Embedding)
+                to learn how to use `self.pretrained_embeddings` to extract the embeddings for your tensor `t`.
 
-            @param t (Tensor): input tensor of tokens (batch_size, n_features)
+        @param t (Tensor): input tensor of tokens (batch_size, n_features)
 
-            @return x (Tensor): tensor of embeddings for words represented in t
-                                (batch_size, n_features * embed_size)
+        @return x (Tensor): tensor of embeddings for words represented in t
+                            (batch_size, n_features * embed_size)
         """
         ### YOUR CODE HERE (~1-3 Lines)
         ### TODO:
@@ -104,13 +117,14 @@ class ParserModel(nn.Module):
         ###     Embedding Layer: https://pytorch.org/docs/stable/nn.html#torch.nn.Embedding
         ###     View: https://pytorch.org/docs/stable/tensors.html#torch.Tensor.view
 
+        x = self.pretrained_embeddings(t)
 
+        x = x.view(x.shape[0], -1)
         ### END YOUR CODE
         return x
 
-
     def forward(self, t):
-        """ Run the model forward.
+        """Run the model forward.
 
             Note that we will not apply the softmax function here because it is included in the loss function nn.CrossEntropyLoss
 
@@ -141,7 +155,13 @@ class ParserModel(nn.Module):
         ###
         ### Please see the following docs for support:
         ###     ReLU: https://pytorch.org/docs/stable/nn.html?highlight=relu#torch.nn.functional.relu
-
+        if use_gpu:
+            t = t.cuda()
+        embeddings = self.embedding_lookup(t)
+        hidden = self.embed_to_hidden(embeddings)
+        hidden_relu = F.relu(hidden)
+        dropout = self.dropout(hidden_relu)
+        logits = self.hidden_to_logits(dropout)
 
         ### END YOUR CODE
         return logits

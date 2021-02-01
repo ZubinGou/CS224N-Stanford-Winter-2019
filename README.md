@@ -52,16 +52,19 @@ All the rights of the relevant materials belong to Standfor University.
 ### reading
 - [ ] note: Dependency Parsing 
 - [ ] note: Language Models and Recurrent Neural Network
-- [ ] a3
 
 ### practice
-- [ ] written: Assignment3
-- [ ] coding: Assignment3
+- [x] PyTorch Tutorial
+- [x] written: Assignment3
+- [x] coding: Assignment3
 
 ## As4
+- [x] lec6
+- [x] lec7
+- [x] lec8
 ### reading
+- [x] lec6: The Unreasonable Effectiveness of Recurrent Neural Networks
 - [ ] note:&emsp;Machine Translation, Sequence-to-sequence and Attention
-- [ ] a4
 - [ ] read:&emsp;Attention and Augmented Recurrent Neural Networks
 - [ ] read:&emsp;Massive Exploration of Neural Machine Translation Architectures (practical advice for hyperparameter choices)
 
@@ -78,7 +81,6 @@ How to understand pack_padded_sequence and pad_packed_sequence?
 ## As5
 ### reading
 - [ ] note:&emsp;Machine Translation, Sequence-to-sequence and Attention
-- [ ] a4
 - [ ] read:&emsp;Attention and Augmented Recurrent Neural Networks
 
 ### practice
