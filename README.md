@@ -12,7 +12,7 @@ All the rights of the relevant materials belong to Standfor University.
 - https://zhuanlan.zhihu.com/p/78536912
 
 ## As1
-- [x] lec1
+- [x] lec1 Word Vectors
 
 ### reading
 - [ ] note: Word Vectors I: Introduction, SVD and Word2Ve
@@ -29,9 +29,9 @@ All the rights of the relevant materials belong to Standfor University.
 
 
 ## As2
-- [x] lec2
-- [x] lec3
-- [x] lec4
+- [x] lec2 Word Vectors 2 and Word Window Classification
+- [x] lec3 Neural Networks
+- [x] lec4 Backpropagation
 
 ### reading
 - [ ] note: Word Vectors II: GloVe, Evaluation and Trainin
@@ -48,7 +48,7 @@ All the rights of the relevant materials belong to Standfor University.
 
 
 ## As3
-- [x] lec5
+- [x] lec5 Dependency Parsing
 ### reading
 - [ ] note: Dependency Parsing 
 - [ ] note: Language Models and Recurrent Neural Network
@@ -59,14 +59,17 @@ All the rights of the relevant materials belong to Standfor University.
 - [x] coding: Assignment3
 
 ## As4
-- [x] lec6
-- [x] lec7
-- [x] lec8
+- [x] lec6 Recurrent Neural Networks and Language Models
+- [x] lec7 Vanishing Gradients, Fancy RNNs, Seq2Seq
+- [x] lec8 Machine Translation, Attention, Subword Models
 ### reading
 - [x] lec6: The Unreasonable Effectiveness of Recurrent Neural Networks
-- [ ] note:&emsp;Machine Translation, Sequence-to-sequence and Attention
-- [ ] read:&emsp;Attention and Augmented Recurrent Neural Networks
-- [ ] read:&emsp;Massive Exploration of Neural Machine Translation Architectures (practical advice for hyperparameter choices)
+- [x] lec7: Understanding LSTM Networks
+- [x] lec8: Sequence to Sequence Learning with Neural Networks
+- [x] lec8: Neural Machine Translation by Jointly Learning to Align and Translate
+- [x] lec8: Attention and Augmented Recurrent Neural Networks
+- [ ] lec8: Massive Exploration of Neural Machine Translation Architectures (practical advice for hyperparameter choices)
+- [ ] lec8 note
 
 ### practice
 - [ ] written: Assignment4
@@ -80,8 +83,8 @@ How to understand pack_padded_sequence and pad_packed_sequence?
 
 ## As5
 ### reading
-- [ ] note:&emsp;Machine Translation, Sequence-to-sequence and Attention
-- [ ] read:&emsp;Attention and Augmented Recurrent Neural Networks
+- [ ] note: Machine Translation, Sequence-to-sequence and Attention
+- [ ] read: Attention and Augmented Recurrent Neural Networks
 
 ### practice
 - [ ] coding: Assignment5
