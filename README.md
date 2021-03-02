@@ -1,9 +1,10 @@
-# CS224N-Stanford-Winter-2019
+# CS224N-Stanford-Winter-2019 & 2021
 The collection of ALL relevant materials about CS224N-Stanford/Winter 2019 course. THANKS TO THE PROFESSOR AND TAs!  
 All the rights of the relevant materials belong to Standfor University.  
 
 ## Links
 - Course page [CS224N](http://web.stanford.edu/class/cs224n/)
+- 2019 Course page [CS224N 2019](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/)
 - Lecture videos 2019 [Youtube](https://www.youtube.com/playlist?list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z)
 - Selected Solutions
   - https://github.com/Luvata/CS224N-2019/tree/master/Assignment
@@ -38,7 +39,6 @@ All the rights of the relevant materials belong to Standfor University.
 - [ ] gradient-notes
 - [ ] CS231n notes on network architectures
 - [ ] CS231n notes on backprop
-- [ ] backprop_old
 
 ### practice
 - [x] python review
@@ -62,6 +62,7 @@ All the rights of the relevant materials belong to Standfor University.
 - [x] lec6 Recurrent Neural Networks and Language Models
 - [x] lec7 Vanishing Gradients, Fancy RNNs, Seq2Seq
 - [x] lec8 Machine Translation, Attention, Subword Models
+- [x] lec12 Subword Models
 - [ ] Winter 2020 | Low Resource Machine Translation
 
 ### reading
@@ -69,7 +70,6 @@ All the rights of the relevant materials belong to Standfor University.
 - [x] lec7: Understanding LSTM Networks
 - [x] lec8: Sequence to Sequence Learning with Neural Networks
 - [x] lec8: Neural Machine Translation by Jointly Learning to Align and Translate
-- [x] lec8: Attention and Augmented Recurrent Neural Networks
 - [ ] lec8: Effective Approaches to Attention-based Neural Machine Translation
 - [ ] lec8: Massive Exploration of Neural Machine Translation Architectures (practical advice for hyperparameter choices)
 - [ ] lec8 note
@@ -79,24 +79,25 @@ All the rights of the relevant materials belong to Standfor University.
 - [x] coding: Assignment4 Neural Machine Translation with sequence-to-sequence, attention, and subwords
 
 ## As5
-- [ ] lec9 Practical Tips for Projects
-- [ ] lec10 Question Answering
-- [ ] lec11 Convolutional Networks for NLP
-- [ ] lec12 Subword Models
-- [ ] lec13 Contextual Word Embeddings
-- [ ] lec14 Transformers and Self-Attention
-- [ ] lec15 Natural Language Generation
-- [ ] Winter 2020 | BERT and Other Pre-trained Language Models
+- [x] lec9 Practical Tips for Projects
+- [x] lec10 Question Answering
+- [x] lec11 Convolutional Networks for NLP
+- [x] lec13 Contextual Word Embeddings
+- [x] lec14 Transformers and Self-Attention
+- [x] Winter 2020 | BERT and Other Pre-trained Language Models
+- [x] Hung-yi Lee: Machine Learning (2020,Spring) Transformer
 
 ### reading
 - [ ] note: Machine Translation, Sequence-to-sequence and Attention
-- [ ] read: Attention and Augmented Recurrent Neural Networks
+- [x] read: Attention and Augmented Recurrent Neural Networks
+- [x] lec14: The Illustrated Transformer
 
 ### practice
 - [ ] written: Assignment5(2021) Self-supervised learning and fine-tuning with Transformers
 - [ ] coding: Assignment5(2021) Self-supervised learning and fine-tuning with Transformers
 
 ## Final project
+- [ ] lec15 Natural Language Generation
 - [ ] lec17 Multitask Learning
 - [ ] lec18 Constituency Parsing, TreeRNNs
 - [ ] lec19 Bias in AI
